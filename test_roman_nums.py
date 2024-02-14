@@ -1,5 +1,6 @@
 # emily cabrera - 1106145
 
+import pytest
 
 #definition of conversion function of the program
 def convert_to_roman(num):
@@ -61,3 +62,13 @@ def test_hundred():
 def test_three_hundred_ninety_nine():
     assert convert_to_roman(399) == "CCCXCIX"
 
+
+#behavior of the algorithm in case of exceptions
+    
+def test_input_negative():
+    with pytest.raises(ValueError):
+        convert_to_roman(-1)
+
+def test_input_out_range():
+    with pytest.raises(ValueError):
+        convert_to_roman(4000)
