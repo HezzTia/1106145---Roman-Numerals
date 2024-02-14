@@ -26,3 +26,6 @@ def convert_to_roman(num):
             roman_num += numeral
             num -= value
     return roman_num
+
+def test_one():
+    assert convert_to_roman(1) == "I"
