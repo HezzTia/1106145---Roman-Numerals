@@ -1,3 +1,7 @@
+# emily cabrera - 1106145
+
+
+#definition of conversion function of the program
 def convert_to_roman(num):
 
     roman_numerals = {
@@ -27,5 +31,33 @@ def convert_to_roman(num):
             num -= value
     return roman_num
 
+
+#normal behavior of the algorithm 
+
 def test_one():
     assert convert_to_roman(1) == "I"
+
+def test_four():
+    assert convert_to_roman(4) == "IV"
+
+def test_five(): 
+    assert convert_to_roman(5) == "V"
+
+def test_nine():
+    assert convert_to_roman(9) == "IX"
+
+def test_ten():
+    assert convert_to_roman(10) == "X"
+
+def test_thirty_nine():
+    assert convert_to_roman(39) == "XXXIX"
+
+def test_ninety_nine():
+    assert convert_to_roman(99) == "XCIX"
+
+def test_hundred():
+    assert convert_to_roman(100) == "C"
+
+def test_three_hundred_ninety_nine():
+    assert convert_to_roman(399) == "CCCXCIX"
+
