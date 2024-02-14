@@ -16,3 +16,13 @@ def convert_to_roman(num):
         1 : "I",
     }
 
+    if num < 1 or num > 3999:
+        raise ValueError("Input number must be between 1 and 3999")
+
+    roman_num = ""
+    
+    for value, numeral in roman_numerals.items():
+        while num >= value:
+            roman_num += numeral
+            num -= value
+    return roman_num
