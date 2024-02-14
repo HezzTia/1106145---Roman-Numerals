@@ -72,3 +72,15 @@ def test_input_negative():
 def test_input_out_range():
     with pytest.raises(ValueError):
         convert_to_roman(4000)
+
+
+#testing to se if it works
+
+def test_four_thousand():
+    assert convert_to_roman(4000) == "MMMM"
+
+def test_minus_one():
+    assert convert_to_roman(-1) == "MMMMI"
+
+def test_false_thity_one():
+    assert convert_to_roman(11) == "XXXI"
